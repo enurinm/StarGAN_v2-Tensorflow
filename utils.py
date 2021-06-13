@@ -59,7 +59,7 @@ def load_test_image(image_path, img_width, img_height, img_channel):
         img = cv2.imread(image_path, flags=cv2.IMREAD_COLOR)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-        img = cv2.resize(img, dsize=(img_width, img_height))
+    img = cv2.resize(img, dsize=(img_width, img_height))
 
     if img_channel == 1 :
         img = np.expand_dims(img, axis=0)
