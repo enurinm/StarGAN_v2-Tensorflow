@@ -39,7 +39,7 @@ def parse_args():
     parser.add_argument('--n_critic', type=int, default=1, help='number of D updates per each G update')
     parser.add_argument('--style_dim', type=int, default=16, help='length of style code')
 
-    parser.add_argument('--num_style', type=int, default=5, help='number of styles to sample')
+    parser.add_argument('--num_style', type=int, default=1, help='number of styles to sample')
 
     parser.add_argument('--img_height', type=int, default=256, help='The height size of image')
     parser.add_argument('--img_width', type=int, default=256, help='The width size of image ')
