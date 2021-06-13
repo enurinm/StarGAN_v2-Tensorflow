@@ -41,10 +41,11 @@ def main():
         sys.stdout.flush()
 
         ori_img = cv2.imread(in_path, cv2.IMREAD_COLOR)
-        ori_img = cv2.resize(ori_img, dsize=(256, 256))
+        ori_img = cv2.resize(ori_img, dsize=(500, 300))
         img_name = os.path.basename(in_path)
         #h, w, c = img.shape
         noised_img = cv2.imread(N_PATH+img_name, cv2.IMREAD_COLOR)
+        noised_img = cv2.resize(ori_img, dsize=(500, 300))
 
         print(in_path)
         print(N_PATH+img_name)
@@ -59,6 +60,6 @@ def main():
         cv2.imwrite(RES + 'img_' + str(k) + '.jpg', newimg)
 
 
- 
+
 if __name__ == '__main__':
     main()
